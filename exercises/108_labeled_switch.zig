@@ -63,7 +63,7 @@ const PullRequestState = enum(u8) {
 pub fn main() void {
     // Oh no, your pull request keeps being rejected,
     // how would you fix it?
-    pr: switch (PullRequestState.Draft) {
+     switch (PullRequestState.Draft) {
         PullRequestState.Draft => continue :pr PullRequestState.InReview,
         PullRequestState.InReview => continue :pr PullRequestState.Approved,
         PullRequestState.Approved => continue :pr PullRequestState.Merged,
